@@ -8,13 +8,19 @@
 
 <!--Client wants a header and footer tag-->
 <head>
+    <title>Fantastic Fence Materials Calculator</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta keywords="Fencing, fence, materials, estimate, cost"/>
     <meta name="description" content="Fencing estimate based on North American materials costs"/>
+    
+    <!-- Tailwind CSS CDN link -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Fantastic Fence Materials Calculator</title>
+    <!-- jQuery Google CDN link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Style CSS -->
+    <link rel="stylesheet" src="./assets/css/style.css">
 </head>
 
 <body>
@@ -51,47 +57,55 @@
 
         <!--Fence Information for User Input -->
         <h2>Fence Measurements</h2>
+
+        <br>
+
         <p>To estimate the fencing materials, enter your fence length, number of rails per section, and picket dimensions.</p>
         <form id="fence-details" class="container">
             <!-- Fence length -->
-            <label for="fence-length">Fence length (ft):</label>
-            <input type="value" id="fence-length" name="fence-length" placeholder="Length in feet">
+            <label for="fence-length">Fence Length (ft):</label>
+            <input type="number" name="fence-length" step="1">
             <br>
             <!-- Railings per section -->
             <label for="railings-per-section">Railings per section:</label>
-            <input type="value" id="railings-per-section" name="railings-per-section" placeholder="2">
+            <input type="number" id="railings-per-section" name="railings-per-section" placeholder="2">
             <br>
             <!-- Pickets -->
-            <label for="picket-width">Picket width:</label>
-            <input type="value" id="picket-width" name="picket-width" placeholder="5.5">
+            <label for="picket-width">Picket width (inches):</label>
+            <input type="number" id="picket-width" name="picket-width" step="0.5" placeholder="5.5">
             <br>
-            <label for="picket-spacing">Picket spacing:</label>
-            <input type="value" id="picket-spacing" name="picket-spacing" placeholder="0">
+            <label for="picket-spacing">Picket spacing (cm):</label>
+            <input type="number" id="picket-spacing" name="picket-spacing" step="" placeholder="0">
             <br>
         </form>
+        
         <br>
+
         <!-- NO INPUTS FROM USER, I NEED OUTPUT FROM JS EQUATIONS TO PUT NUMBERS IN BOXES -->
         <!-- Fence Materials and Estimate -->
         <h2>Material Estimate:</h2>
+
+        <br>
+        
         <section id="estimate" class="container">
             <!-- Posts starts at 2 posts, then increases by 1 post per 8 ft-->
-            <label for="posts">Posts (10' 6" x 6" posts):</label>
+            <label for="posts">Posts (10' 6" x 6"):</label>
             <input type="value" id="posts" name="posts" placeholder="0">
             <br>
             <!-- Railings = 2 railings per section ()-->
-            <label for="railings">Railings (8' 2" x 4" rails):</label>
+            <label for="railings">Railings (8' 2" x 4"):</label>
             <input type="value" id="railings" name="railings" placeholder="0">
             <br>
             <!-- Pickets -->
-            <label for="pickets">Pickets (5 1/2" pickets):</label>
+            <label for="pickets">Pickets (5 1/2"):</label>
             <input type="value" id="pickets" name="pickets" placeholder="0">
             <br>
             <!-- 1-1/2" screws/nails -->
-            <label for="nails-1-inch">Nails:</label>
+            <label for="nails-1-inch">Nails or Screws (1 1/2"):</label>
             <input type="value" id="nails-1-inch" name="nails-1-inch" placeholder="0">
             <br>
             <!-- 3-1/2" screws/nails -->
-            <label for="nails-3-inch">Concrete (10kg):</label>
+            <label for="nails-3-inch">Nails or Screws (3 1/2"):</label>
             <input type="value" id="nails-3-inch" name="nails-3-inch" placeholder="0">
             <br>
         </section>
@@ -112,9 +126,8 @@
         </p>
     </footer>
 
-    <!-- jQuery  -->
-    <!-- SCRIPTS -->
     <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
