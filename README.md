@@ -2,7 +2,7 @@
 
 ## Description
 
-This website uses HTML, CSS, and JS to determine the estimate cost of building a fence in Ontario.  
+This website uses HTML, CSS, and JS to determine the estimate cost of building a fence in North America. The fence calculator takes the fence length, post spacing, fence height, post height, railings per section, picket width, and picket spacing as parameters   
 
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:

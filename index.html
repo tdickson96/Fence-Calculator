@@ -1,2 +1,120 @@
-bootstrap, font apis, and servier side api
-fence calculator
+<!-- bootstrap, font apis, and servier side api -->
+<!-- fence calculator  -->
+
+<!--Client looking for polished and accessible UI on a single webpage-->
+<!--Client looking for appropriate HTML semantic elements-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Client wants a header and footer tag-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta keywords="Fencing, fence, materials, estimate, cost"/>
+    <meta name="description" content="Fencing estimate based on North American materials costs"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fantastic Fence Materials Calculator</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header class="container">
+        <h1>Fence Materials Calculator</h1>
+        <!--Client wants navigation bar with three links that display inline with a contact link-->
+        <nav>
+            <ul>
+                <li>
+                    <!--Navigation bar link one-->
+                    <a href="#fence-details">Fence Estimate</a>
+                </li>
+                <li>
+                    <!--Navigation bar link two-->
+                    <a href="https://www.omnicalculator.com/construction/fence">Another Fence Calculator</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Image of fence -->
+        <figure class="">
+            <!--Image with alt attribute-->
+            <img src="./assets/images/fence.jpg" alt="Wooden fence in yard"/>
+            <!--Image caption-->
+            <figcaption>What your fence could look like!</figcaption>
+        </figure>
+
+        <br>
+
+        <!--Fence Information for User Input -->
+        <h2>Fence Measurements</h2>
+        <p>To estimate the fencing materials, enter your fence length, number of rails per section, and picket dimensions.</p>
+        <form id="fence-details" class="container">
+            <!-- Fence length -->
+            <label for="fence-length">Fence length (ft):</label>
+            <input type="value" id="fence-length" name="fence-length" placeholder="Length in feet">
+            <br>
+            <!-- Railings per section -->
+            <label for="railings-per-section">Railings per section:</label>
+            <input type="value" id="railings-per-section" name="railings-per-section" placeholder="2">
+            <br>
+            <!-- Pickets -->
+            <label for="picket-width">Picket width:</label>
+            <input type="value" id="picket-width" name="picket-width" placeholder="5.5">
+            <br>
+            <label for="picket-spacing">Picket spacing:</label>
+            <input type="value" id="picket-spacing" name="picket-spacing" placeholder="0">
+            <br>
+        </form>
+        <br>
+        <!-- NO INPUTS FROM USER, I NEED OUTPUT FROM JS EQUATIONS TO PUT NUMBERS IN BOXES -->
+        <!-- Fence Materials and Estimate -->
+        <h2>Material Estimate:</h2>
+        <section id="estimate" class="container">
+            <!-- Posts starts at 2 posts, then increases by 1 post per 8 ft-->
+            <label for="posts">Posts (10' 6" x 6" posts):</label>
+            <input type="value" id="posts" name="posts" placeholder="0">
+            <br>
+            <!-- Railings = 2 railings per section ()-->
+            <label for="railings">Railings (8' 2" x 4" rails):</label>
+            <input type="value" id="railings" name="railings" placeholder="0">
+            <br>
+            <!-- Pickets -->
+            <label for="pickets">Pickets (5 1/2" pickets):</label>
+            <input type="value" id="pickets" name="pickets" placeholder="0">
+            <br>
+            <!-- 1-1/2" screws/nails -->
+            <label for="nails-1-inch">Nails:</label>
+            <input type="value" id="nails-1-inch" name="nails-1-inch" placeholder="0">
+            <br>
+            <!-- 3-1/2" screws/nails -->
+            <label for="nails-3-inch">Concrete (10kg):</label>
+            <input type="value" id="nails-3-inch" name="nails-3-inch" placeholder="0">
+            <br>
+        </section>
+        <br>
+         <!-- Contact Form -->
+         <button type="button" class="container">Send Estimate to Email</button>
+    </main>
+
+    <br>
+
+    <!--Footer -->
+    <footer class="container">
+        <!--h3 -->
+        <h3>Made with ❤️️</h3>
+        <!--Copyright icon -->
+        <p>
+            &copy; 2022 by Trent Dickson
+        </p>
+    </footer>
+
+    <!-- jQuery  -->
+    <!-- SCRIPTS -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
