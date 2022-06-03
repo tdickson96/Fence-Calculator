@@ -56,10 +56,6 @@ section form {
     display: inline-block;
 }
 
-/* One out of three colors the client wants */
-.header h1 .planters {
-    color: pink
-}
 
 .header nav {
     padding-top: 15px;
@@ -76,22 +72,18 @@ section form {
     margin-left: 25px;
 }
 
-.planters {
-    height: 200px;
-    width: 250px;
-    margin-bottom: 20px;
-    background-size: cover;
-    background-position: center;
-}
-
-.crop img {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-}
-
 .footer {
     padding: 25px;
     clear: both;
     text-align: center;
+}
+
+#up {
+    height: 25px;
+    width: 25px;
+}
+
+#down {
+    height: 25px;
+    width: 25px;
 }
