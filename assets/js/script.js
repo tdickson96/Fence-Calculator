@@ -8,6 +8,18 @@
 // Click send estimate to email, type in email, and send estimate
 // 1000 nails per 30ft of fnecing, minimum 1 box
 
+// jQuery that allows user to increase values with buttons
+// I think it is not necessary since the 
+$(document).ready(function(){
+    $("#up").on('click',function(){
+        $("#incdec input").val(parseInt($("#incdec input").val())+1);
+    });
+
+    $("#down").on('click',function(){
+        $("#incdec input").val(parseInt($("#incdec input").val())-1);
+    });
+
+});
 
 
 // Posts = (length in feet / 8') + 1
