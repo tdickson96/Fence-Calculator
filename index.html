@@ -14,11 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta keywords="Fencing, fence, materials, estimate, cost"/>
     <meta name="description" content="Fencing estimate based on North American materials costs"/>
-    
-    <!-- Tailwind CSS CDN link -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- jQuery Google CDN link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Style CSS -->
     <link rel="stylesheet" src="./assets/css/style.css">
 </head>
@@ -64,7 +61,7 @@
         <form id="fence-details" class="container">
             <!-- Fence length -->
             <label for="fence-length">Fence Length (ft):</label>
-            <input type="number" name="fence-length" step="1">
+            <input type="number" id="fence-length" name="fence-length" step="1">
             <br>
             <!-- Railings per section -->
             <label for="railings-per-section">Railings per section:</label>
@@ -126,6 +123,9 @@
         </p>
     </footer>
 
+    <!-- jQuery Google CDN link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- JavaScript -->
     <script src="./assets/js/script.js"></script>
 
 </body>
