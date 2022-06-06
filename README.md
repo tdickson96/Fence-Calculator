@@ -2,6 +2,10 @@
 
 ## Description
 
+Repo: https://github.com/tdickson96/Fence-Calculator
+Pages: https://tdickson96.github.io/Fence-Calculator/#fence-details 
+Presentation: https://docs.google.com/presentation/d/1iP1AmjdYUtZuMmOhdGqdTWXz074w40V4YfHviov0ubU/edit#slide=id.g29f43f0a72_0_24 
+
 This website uses HTML, CSS, and JS to determine the estimate cost of building a fence in North America. The fence calculator takes the fence length, post spacing, fence height, post height, railings per section, picket width, and picket spacing as parameters   
 
 I wanted to create a simple fence calculator that could produce a price estimate in less than a minute.
