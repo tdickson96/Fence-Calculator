@@ -8,128 +8,99 @@
 
 <!--Client wants a header and footer tag-->
 <head>
-    <title>Fantastic Fence Materials Calculator</title>
+    <title>Fantastic Fence Calculator</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta keywords="Fencing, fence, materials, estimate, cost"/>
     <meta name="description" content="Fencing estimate based on North American materials costs"/>
-    <!-- Bootstrap styling -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- BulmaCSS styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" src="./assets/css/style.css">
 </head>
 
+<!-- Add margins and padding to each piece -->
 <body>
-    <!--Header-->
-    <header class="container">
-        <h1>Fence Materials Calculator</h1>
-        <!--Client wants navigation bar with three links that display inline with a contact link-->
-        <nav>
-            <ul>
-                <li>
-                    <!--Navigation bar link one-->
-                    <a href="#fence-details">Fence Estimate</a>
-                </li>
-                <li>
-                    <!--Navigation bar link two-->
-                    <a href="https://www.omnicalculator.com/construction/fence">Another Fence Calculator</a>
-                </li>
-            </ul>
-        </nav>
+    <!--Title-->
+    <header>
+        <!-- Center, underline, and increased font size -->
+        <h1 class="navbar footer">Fence Estimator</h1>
     </header>
-
-    <!-- Main -->
     <main>
-        <!-- Image of fence -->
-        <figure class="">
-            <!--Image with alt attribute-->
-            <img src="./assets/images/fence.jpg" alt="Wooden fence in yard"/>
+        <!-- Center, shrink, and give a figure caption -->
+        <figure class="headings center">
+            <!--Image of fence with alt attribute-->
+            <img src="./assets/images/fence.jpg" alt="Wooden fence in yard" aria-label="fence"/>
             <!--Image caption-->
             <figcaption>What your fence could look like!</figcaption>
         </figure>
-
-        <br>
-
         <!--Fence Information for User Input -->
-        <h2>Fence Measurements:</h2>
-        <p>To estimate the fencing materials, enter your fence length, number of rails per section, and picket dimensions.</p>
-        <form id="fence-details" class="container">
+        <!-- Center, underline, and increase font size -->
+        <form id="fence-details" class="column gap">
             <!-- Fence length -->
-            <label for="fence-length">Fence Length (ft):</label>
-            <input type="number" id="fence-length" name="fence-length" step="1" value="8">
-            <br>
-            <!-- Pickets -->
-            <label for="picket-spacing">Picket spacing (cm):</label>
-            <input type="number" id="picket-spacing" name="picket-spacing" step="0.1" value="0">
-            <br>
+            <label for="fence-length" class="column gap label">Fence Length (ft):</label>
+            <input type="number" id="fence-length" name="fence-length" class="column input is-one-quarter" step="1" value="8">
         </form>
-        <button class="container" id="materials-estimate">Generate Materials Estimate</button>
         <br>
-
-        <!-- NO INPUTS FROM USER, I NEED OUTPUT FROM JS EQUATIONS TO PUT NUMBERS IN BOXES -->
-        <!-- Fence Materials and Estimate -->
-        <h2>Material Estimate:</h2>
-        <p>Price estimates may vary based on location and retail vendor!</p>  
-        <section id="estimate" class="container">
+        <button class="button is-primary gap" id="materials-estimate">Generate Materials Estimate</button>
+        <br>
+        <br>
+        <!-- Fence Materials -->
+        <h2 class="column">Material Estimate:</h2>
+        <section id="estimate" class="column">
             <!-- Posts starts at 2 posts, then increases by 1 post per 8 ft-->
-            <label for="posts">Posts (10' 6" x 6"):</label>
-            <input type="value" id="posts" name="posts" value="0">
+            <label class="column gap label" for="posts">Posts (10' 6" x 6"):</label>
+            <input type="value" id="posts" class="column input is-one-quarter" name="posts" value="0" >
             <br>
             <!-- Railings = 2 railings per section ()-->
-            <label for="railings">Railings (8' 2" x 4"):</label>
-            <input type="value" id="railings" name="railings" value="0">
+            <label class="column gap label" for="railings">Railings (8' 2" x 4"):</label>
+            <input type="value" id="railings" class="column input is-one-quarter" name="railings" value="0">
             <br>
             <!-- Pickets -->
-            <label for="pickets">Pickets (5 1/2"):</label>
-            <input type="value" id="pickets" name="pickets" value="0">
+            <label class="column gap label" for="pickets">Pickets (5 1/2"):</label>
+            <input type="value" id="pickets" class="column input is-one-quarter" name="pickets" value="0">
             <br>
-            <!-- 1-1/2" screws/nails -->
-            <label for="nails-1-inch">Nails or Screws (1 1/2"):</label>
-            <input type="value" id="nails-1-inch" name="nails-1-inch" value="0">
-            <br>
-            <!-- 3-1/2" screws/nails -->
-            <label for="nails-3-inch">Nails or Screws (3 1/2"):</label>
-            <input type="value" id="nails-3-inch" name="nails-3-inch" value="0">
+            <!-- Screws -->
+            <label class="column gap label" for="screws">Screws/Nails (per 1000):</label>
+            <input type="value" id="screws" class="column input is-one-quarter" name="screws" value="0">
             <br>
         </section>
-
-        <h2>Cost Estimate:</h2>       
-        <section id="cost" class="container">
+        <br>
+        <!-- Cost estimate -->
+        <h2 id="cost-estimate" class="column">Cost Estimate ($)</h2>       
+        <section class="column" id="cost">
             <!-- Posts starts at 2 posts, then increases by 1 post per 8 ft-->
-            <label for="posts">Posts (10' 6" x 6"):</label>
-            <input type="value" id="posts" name="posts" value="0">
+            <label class="column gap label" for="posts">Posts ($):</label>
+            <input class="column input is-one-quarter" type="value" id="postCost" name="posts" value="0">
             <br>
             <!-- Railings = 2 railings per section ()-->
-            <label for="railings">Railings (8' 2" x 4"):</label>
-            <input type="value" id="railings" name="railings" value="0">
+            <label class="column gap label" for="railings">Railings ($):</label>
+            <input class="column input is-one-quarter" type="value" id="railingCost" name="railings" value="0">
             <br>
             <!-- Pickets -->
-            <label for="pickets">Pickets (5 1/2"):</label>
-            <input type="value" id="pickets" name="pickets" value="0">
+            <label class="column gap label" for="pickets">Pickets ($):</label>
+            <input class="column input is-one-quarter" type="value" id="picketCost" name="pickets" value="0">
             <br>
-            <!-- 1-1/2" screws/nails -->
-            <label for="nails-1-inch">Nails or Screws (1 1/2"):</label>
-            <input type="value" id="nails-1-inch" name="nails-1-inch" value="0">
+            <!-- Screws -->
+            <label class="column gap label" for="screws">Screws/Nails ($):</label>
+            <input class="column input is-one-quarter" type="value" id="screwCost" name="screws" value="0">
             <br>
-            <!-- 3-1/2" screws/nails -->
-            <label for="nails-3-inch">Nails or Screws (3 1/2"):</label>
-            <input type="value" id="nails-3-inch" name="nails-3-inch" value="0">
-            <br>
+        </section>
+        <br>
+        <!-- Total Cost -->
+        <h2 id="total-cost" class="column">Fence Total Cost Estimate ($)</h2>
+        <section class="column" id="total">
+            <label class="column gap label" for="totals">Fence Cost Estimate:</label>
+            <input class="column input is-one-quarter" type="value" id="totalCost" name="total" value="0">
         </section>
         <br>
          <!-- Contact Form -->
-         <button type="button" class="container">Send Materials and Cost Estimate to Email</button>
+         <button type="button" class="button is-primary" id="email-btn">Send Materials and Cost Estimate to Email</button>
+         <br>
     </main>
-
-    <!--Footer -->
-    <footer class="container">
-        <!--h3 -->
-        <h3>Made with ❤️️</h3>
-        <!--Copyright icon -->
-        <p>
-            &copy; 2022 by Trent Dickson
-        </p>
+    <footer class="footer">
+        <h3>Made by Trent!</h3>
     </footer>
 
     <!-- jQuery CDN link -->

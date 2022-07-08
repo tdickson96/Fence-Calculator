@@ -1,89 +1,14 @@
-/* Universal selector to set single font family for entire document */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-/* Element selectors */
-body {
-    background-color: aquamsarine;
-}
-
-/* One out of three colors the client wants */
-a {
-    color: pink;
-    text-decoration: none;
-}
-
-p {
-    font-size: 20px;
-}
-
-
-h2 {
-    text-decoration: underline;
-}
-
-body section h2, body section p, body section img {
-    text-align: center;
+.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    padding: 3em;    
 }
 
-section form {
+.headings {
+    font-size: 24px;
     text-align: center;
-    display: block;
-    padding: 3em;
-}
-
-/* Class selectors */
-/* Two out of three colors the client wants */
-/* Client wants the header fixed to the top of the website while scrolling */
-.header {
-    padding: 1.5em;
-    background-color: #95b195;
-    color: #ffffff;
-    position: fixed;
-    width: 100%;
-}
-
-.header h1 {
-    display: inline-block;
-}
-
-
-.header nav {
-    padding-top: 15px;
-    margin-bottom: 15px;
-    float: right;
-}
-
-.header nav ul {
-    list-style-type: none;
-}
-
-.header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-.footer {
-    padding: 25px;
-    clear: both;
-    text-align: center;
-}
-
-#up {
-    height: 25px;
-    width: 25px;
-}
-
-#down {
-    height: 25px;
-    width: 25px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
 }
