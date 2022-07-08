@@ -14,7 +14,7 @@ There are many fence calculators to draw inspiration from and I found it helpful
 
 ## Installation
 
-Open the HTML browser and input the length of your fence and amount of corners. These input fields will provide the user with a fence cost estimate that is up to Ontario provincial code.
+Open the HTML browser and input the length of your fence. These input fields will provide the user with a fence cost estimate that is up to Ontario provincial code. Costs are based in Canadian pricing. 
 
 ## User Story
 

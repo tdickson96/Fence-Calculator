@@ -20,89 +20,70 @@
     <link rel="stylesheet" src="./assets/css/style.css">
 </head>
 
-<!-- Add margins and padding to each piece -->
-<body>
-    <!--Title-->
-    <header>
-        <!-- Center, underline, and increased font size -->
-        <h1 class="navbar footer">Fence Estimator</h1>
+<body class="container has-text-centered is-desktop">
+    <header class="footer">
+        <h1 class="footer" id="fence-estimator">Fence Estimator</h1>
     </header>
     <main>
-        <!-- Center, shrink, and give a figure caption -->
-        <figure class="headings center">
+        <figure class="headings center m-1 p-4 has-text-centered">
             <!--Image of fence with alt attribute-->
             <img src="./assets/images/fence.jpg" alt="Wooden fence in yard" aria-label="fence"/>
-            <!--Image caption-->
-            <figcaption>What your fence could look like!</figcaption>
+            <figcaption class="has-text-centered">What your fence could look like!</figcaption>
         </figure>
-        <!--Fence Information for User Input -->
-        <!-- Center, underline, and increase font size -->
-        <form id="fence-details" class="column gap">
+
+        <form id="fence-details" class="column gap m-1 p-4">
             <!-- Fence length -->
             <label for="fence-length" class="column gap label">Fence Length (ft):</label>
-            <input type="number" id="fence-length" name="fence-length" class="column input is-one-quarter" step="1" value="8">
+            <input type="number" id="fence-length" name="fence-length" class="column input is-one-quarter container has-text-centered is-desktop" step="1" value="8">
         </form>
-        <br>
-        <button class="button is-primary gap" id="materials-estimate">Generate Materials Estimate</button>
-        <br>
-        <br>
+
+        <button class="button is-primary gap m-1 p-4" id="materials-estimate">Generate Materials Estimate</button>
+
         <!-- Fence Materials -->
-        <h2 class="column">Material Estimate:</h2>
-        <section id="estimate" class="column">
+        <h2 class="column label m-1 p-4 has-text-centered">Material Estimate:</h2>
+        <section id="estimate" class="column m-1 p-4">
             <!-- Posts starts at 2 posts, then increases by 1 post per 8 ft-->
             <label class="column gap label" for="posts">Posts (10' 6" x 6"):</label>
-            <input type="value" id="posts" class="column input is-one-quarter" name="posts" value="0" >
-            <br>
+            <input type="value" id="posts" class="column input is-one-quarter container has-text-centered is-desktop" name="posts" value="0" >
             <!-- Railings = 2 railings per section ()-->
             <label class="column gap label" for="railings">Railings (8' 2" x 4"):</label>
-            <input type="value" id="railings" class="column input is-one-quarter" name="railings" value="0">
-            <br>
+            <input type="value" id="railings" class="column input is-one-quarter container has-text-centered is-desktop" name="railings" value="0">
             <!-- Pickets -->
             <label class="column gap label" for="pickets">Pickets (5 1/2"):</label>
-            <input type="value" id="pickets" class="column input is-one-quarter" name="pickets" value="0">
-            <br>
+            <input type="value" id="pickets" class="column input is-one-quarter container has-text-centered is-desktop" name="pickets" value="0">
             <!-- Screws -->
             <label class="column gap label" for="screws">Screws/Nails (per 1000):</label>
-            <input type="value" id="screws" class="column input is-one-quarter" name="screws" value="0">
-            <br>
+            <input type="value" id="screws" class="column input is-one-quarter container has-text-centered is-desktop" name="screws" value="0">
         </section>
-        <br>
-        <!-- Cost estimate -->
-        <h2 id="cost-estimate" class="column">Cost Estimate ($)</h2>       
-        <section class="column" id="cost">
-            <!-- Posts starts at 2 posts, then increases by 1 post per 8 ft-->
-            <label class="column gap label" for="posts">Posts ($):</label>
-            <input class="column input is-one-quarter" type="value" id="postCost" name="posts" value="0">
-            <br>
-            <!-- Railings = 2 railings per section ()-->
-            <label class="column gap label" for="railings">Railings ($):</label>
-            <input class="column input is-one-quarter" type="value" id="railingCost" name="railings" value="0">
-            <br>
-            <!-- Pickets -->
-            <label class="column gap label" for="pickets">Pickets ($):</label>
-            <input class="column input is-one-quarter" type="value" id="picketCost" name="pickets" value="0">
-            <br>
-            <!-- Screws -->
-            <label class="column gap label" for="screws">Screws/Nails ($):</label>
-            <input class="column input is-one-quarter" type="value" id="screwCost" name="screws" value="0">
-            <br>
-        </section>
-        <br>
-        <!-- Total Cost -->
-        <h2 id="total-cost" class="column">Fence Total Cost Estimate ($)</h2>
-        <section class="column" id="total">
-            <label class="column gap label" for="totals">Fence Cost Estimate:</label>
-            <input class="column input is-one-quarter" type="value" id="totalCost" name="total" value="0">
-        </section>
-        <br>
-         <!-- Contact Form -->
-         <button type="button" class="button is-primary" id="email-btn">Send Materials and Cost Estimate to Email</button>
-         <br>
-    </main>
-    <footer class="footer">
-        <h3>Made by Trent!</h3>
-    </footer>
 
+        <!-- Cost estimate -->
+        <h2 id="cost-estimate" class="column label m-1 p-4">Cost Estimate (CAD$)</h2>       
+        <section class="column m-1 p-4" id="cost">
+            <!-- Posts starts at 2 posts, then increases by 1 post per 8 ft-->
+            <label class="column gap label" for="posts">Posts (CAD$):</label>
+            <input class="column input is-one-quarter container has-text-centered is-desktop" type="value" id="postCost" name="posts" value="0">
+            <!-- Railings = 2 railings per section ()-->
+            <label class="column gap label" for="railings">Railings (CAD$):</label>
+            <input class="column input is-one-quarter container has-text-centered is-desktop" type="value" id="railingCost" name="railings" value="0">
+            <!-- Pickets -->
+            <label class="column gap label" for="pickets">Pickets (CAD$):</label>
+            <input class="column input is-one-quarter container has-text-centered is-desktop" type="value" id="picketCost" name="pickets" value="0">
+            <!-- Screws -->
+            <label class="column gap label" for="screws">Screws/Nails (CAD$):</label>
+            <input class="column input is-one-quarter container has-text-centered is-desktop" type="value" id="screwCost" name="screws" value="0">
+        </section>
+
+        <!-- Total Cost -->
+        <h2 id="total-cost" class="column label m-1 p-4">Total Material Cost (CAD$):</h2>
+        <section class="column" id="total">
+            <input class="column input is-one-quarter container has-text-centered is-desktop" type="value" id="totalCost" name="total" value="0">
+        </section>
+         <!-- Contact Form -->
+         <button type="button" class="button is-primary m-1 p-4" id="email-btn">Send Materials and Cost Estimate to Email</button>
+         <footer class="footer">
+            <h3>Note that this calculator is for materials only, labour is a separate factor!</h3>
+        </footer>
+    </main>
     <!-- jQuery CDN link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- JavaScript -->

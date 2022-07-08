@@ -12,3 +12,7 @@
     align-self: center;
     align-content: center;
 }
+
+#fence-estimator {
+    font-size: 34px;
+}

@@ -67,7 +67,7 @@ $("#materials-estimate").click(function () {
     postCost.val(poCost);
     railingCost.val(rCost);
     picketCost.val(piCost);
-    screwCost.val(scCost);
+    screwCost.val(Math.floor(scCost));
 
     // Total cost
     let totalCost = $("#totalCost");
