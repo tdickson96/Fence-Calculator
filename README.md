@@ -24,7 +24,15 @@ As a prior deck and fence contractor, I noticed the subpar quality of all websit
 
 Provide instructions and examples for use.
 
-![alt text](assets/images/screenshot.png)
+![demo](assets/images/demo.png)
+
+![demo](assets/images/demo1.png)
+
+![demo](assets/images/demo2.png)
+
+![demo](assets/images/demo3.png)
+
+![demo](assets/images/demo4.png)
 
 
 ## Credits
