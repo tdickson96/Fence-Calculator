@@ -44,10 +44,6 @@ Fence Calculator [https://www.omnicalculator.com/construction/fence]
 <li>Fence estimates</li>
 <li>Wood sourced from sustainable sources</li>
 
-## Tests
-
-Go the extra mile and write tests for your application.
-
 ## License
 
 MIT License
