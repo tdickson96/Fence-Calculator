@@ -1,9 +1,3 @@
-// I need a function that takes estimate materials and outputs a cost estimate
-// I need to take the user INPUTS from the fence details and turn them into amount of materials
-
-// input.addEventListener("input", (e) => { 
-//    textarea.innerText = input.value; 
-// }
 // 4 x 4 x 10
 const posts = 100025396;
 // 2 x 4 x 8
@@ -54,11 +48,6 @@ $("#materials-estimate").click(function () {
     railings.val(railingsMath);
     pickets.val(picketsMath);
     screws.val(screwsMath);
-    if (screwsMath < 1000) {
-        screws.val(1000);
-    } else if (screwsMath > 1000) {
-        Math.round(value/1000)*1000;
-    };
 
     // Cost estimate based on materials
     let postCost = $("#postCost");
@@ -86,6 +75,12 @@ $("#materials-estimate").click(function () {
     let totalMath = (poCost + rCost + piCost + scCost);
 
     totalCost.val(totalMath);
+
+    if (screwsMath < 1000) {
+      screws.val(1000);
+    } else if (screwsMath > 1000) {
+      Math.round(value/1000)*1000;
+    };
 })
 
 $("#email-btn").click(function () {
